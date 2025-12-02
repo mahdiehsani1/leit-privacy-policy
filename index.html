@@ -1,19 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Leit</title>
-    
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- English / German -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Persian -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Leit App Design System
+           Enhanced with Animations
+        */
         :root {
             /* Light Mode Defaults */
             --bg-color: #ffffff;
@@ -30,7 +29,6 @@
             --radius-card: 24px;
             --radius-btn: 18px;
         }
-
         @media (prefers-color-scheme: dark) {
             :root {
                 /* Dark Mode Defaults */
@@ -47,19 +45,16 @@
                 --shadow-hover: 0 20px 40px rgba(0,0,0,0.6);
             }
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
-            font-family: 'Poppins', 'Vazirmatn', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.7;
@@ -67,39 +62,6 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
-
-        body[dir="rtl"] {
-            direction: rtl;
-            font-family: 'Vazirmatn', 'Poppins', sans-serif;
-        }
-
-        body[dir="rtl"] h2,
-        body[dir="rtl"] h3,
-        body[dir="rtl"] p,
-        body[dir="rtl"] li {
-            text-align: right;
-        }
-
-        body[dir="rtl"] h2 {
-            padding-right: 20px;
-            padding-left: 0;
-        }
-
-        body[dir="rtl"] h2::before {
-            left: auto;
-            right: 0;
-        }
-
-        body[dir="rtl"] li {
-            padding-right: 24px;
-            padding-left: 0;
-        }
-
-        body[dir="rtl"] li::before {
-            left: auto;
-            right: 0;
-        }
-
         /* Progress Bar */
         .progress-container {
             position: fixed;
@@ -110,20 +72,17 @@
             background: transparent;
             z-index: 1000;
         }
-
         .progress-bar {
             height: 4px;
             background: var(--accent);
             width: 0%;
             transition: width 0.1s ease-out;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 60px 24px;
         }
-
         /* Animations */
         @keyframes fadeUp {
             from {
@@ -135,42 +94,10 @@
                 transform: translateY(0);
             }
         }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
-        @keyframes contentFadeOut {
-            from {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-        }
-
-        @keyframes contentFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .lang-anim-out {
-            animation: contentFadeOut 0.25s ease forwards;
-        }
-
-        .lang-anim-in {
-            animation: contentFadeIn 0.35s ease forwards;
-        }
-
         /* Header Style */
         header {
             text-align: center;
@@ -178,15 +105,12 @@
             padding-bottom: 40px;
             border-bottom: 1px solid var(--divider);
             animation: fadeUp 0.8s ease-out;
-            position: relative;
         }
-
         .logo-container {
             display: inline-block;
             margin-bottom: 16px;
             position: relative;
         }
-
         .app-name {
             font-size: 42px;
             font-weight: 800;
@@ -196,14 +120,12 @@
             -webkit-text-fill-color: transparent;
             display: inline-block;
         }
-
         h1 {
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
-
         .date {
             font-size: 14px;
             color: var(--text-secondary);
@@ -214,60 +136,6 @@
             display: inline-block;
             box-shadow: var(--shadow-sm);
         }
-
-        /* Language Switcher */
-        .lang-switcher {
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.04);
-            backdrop-filter: blur(10px);
-            border-radius: 999px;
-            padding: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        body[dir="rtl"] .lang-switcher {
-            right: auto;
-            left: 0;
-        }
-
-        .lang-btn {
-            border: none;
-            outline: none;
-            background: transparent;
-            padding: 6px 14px;
-            border-radius: 999px;
-            font-size: 12px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-
-        .lang-btn span {
-            opacity: 0.7;
-        }
-
-        .lang-btn.active {
-            background: var(--accent);
-            color: var(--btn-text);
-            box-shadow: 0 8px 22px rgba(0,0,0,0.18);
-        }
-
-        .lang-btn.active span {
-            opacity: 1;
-        }
-
-        .lang-btn:hover:not(.active) {
-            background: rgba(0,0,0,0.06);
-        }
-
         /* Card Section Style */
         .section-card {
             background-color: var(--card-bg);
@@ -280,24 +148,21 @@
             animation: fadeUp 0.8s ease-out forwards;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         /* Staggered Animation Delays */
-        .section-card:nth-child(1) { animation-delay: 0.1s; }
-        .section-card:nth-child(2) { animation-delay: 0.2s; }
-        .section-card:nth-child(3) { animation-delay: 0.3s; }
-        .section-card:nth-child(4) { animation-delay: 0.4s; }
-        .section-card:nth-child(5) { animation-delay: 0.5s; }
-        .section-card:nth-child(6) { animation-delay: 0.6s; }
-        .section-card:nth-child(7) { animation-delay: 0.7s; }
-        .section-card:nth-child(8) { animation-delay: 0.8s; }
-        .section-card:nth-child(9) { animation-delay: 0.9s; }
-        .section-card:nth-child(10) { animation-delay: 1.0s; }
-
+        .section-card:nth-child(2) { animation-delay: 0.1s; }
+        .section-card:nth-child(3) { animation-delay: 0.2s; }
+        .section-card:nth-child(4) { animation-delay: 0.3s; }
+        .section-card:nth-child(5) { animation-delay: 0.4s; }
+        .section-card:nth-child(6) { animation-delay: 0.5s; }
+        .section-card:nth-child(7) { animation-delay: 0.6s; }
+        .section-card:nth-child(8) { animation-delay: 0.7s; }
+        .section-card:nth-child(9) { animation-delay: 0.8s; }
+        .section-card:nth-child(10) { animation-delay: 0.9s; }
+        /* Hover Effect for Cards */
         .section-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
         }
-
         h2 {
             font-size: 22px;
             font-weight: 700;
@@ -306,7 +171,7 @@
             position: relative;
             padding-left: 20px;
         }
-
+        /* Decorative line next to H2 */
         h2::before {
             content: '';
             position: absolute;
@@ -317,7 +182,6 @@
             background-color: var(--accent);
             border-radius: 4px;
         }
-
         h3 {
             font-size: 17px;
             font-weight: 600;
@@ -325,25 +189,22 @@
             margin-bottom: 12px;
             color: var(--text-primary);
         }
-
         p, li {
             font-size: 15px;
             color: var(--text-secondary);
             margin-bottom: 16px;
             font-weight: 400;
         }
-
         ul {
             list-style: none;
             padding: 0;
         }
-
         li {
             position: relative;
-            margin-bottom: 10px;
             padding-left: 24px;
+            margin-bottom: 10px;
         }
-
+        /* Custom Bullet Points */
         li::before {
             content: '•';
             color: var(--accent);
@@ -354,12 +215,10 @@
             font-size: 18px;
             line-height: 1.6;
         }
-
         strong {
             color: var(--text-primary);
             font-weight: 600;
         }
-
         /* Button Style */
         .contact-btn {
             display: inline-flex;
@@ -375,19 +234,15 @@
             margin-top: 16px;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            white-space: nowrap;
         }
-
         .contact-btn:hover {
             background-color: var(--accent-hover);
             transform: scale(1.02);
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
-
         .contact-btn:active {
             transform: scale(0.98);
         }
-
         /* Footer */
         footer {
             text-align: center;
@@ -397,11 +252,9 @@
             opacity: 0;
             animation: fadeIn 1s ease-out 1.5s forwards;
         }
-
         footer span {
             opacity: 0.6;
         }
-
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             .container { padding: 40px 20px; }
@@ -409,47 +262,359 @@
             h1 { font-size: 24px; }
             .section-card { padding: 24px; border-radius: 20px; }
             h2 { font-size: 20px; }
-            .lang-switcher {
-                position: static;
-                transform: none;
-                margin: 0 auto 24px auto;
-            }
-            header {
-                padding-top: 20px;
-            }
+        }
+
+        /* Language Switcher Styles */
+        .language-switcher {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        #language-select {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--divider);
+            border-radius: var(--radius-btn);
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #language-select:hover {
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Language Content Styles */
+        .language-content {
+            transition: opacity 0.5s ease;
+            opacity: 1;
+        }
+        .language-content[lang="fa"] {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+        .language-content[lang="fa"] h2 {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+        .language-content[lang="fa"] h2::before {
+            left: auto;
+            right: 0;
+        }
+        .language-content[lang="fa"] li {
+            padding-left: 0;
+            padding-right: 24px;
+        }
+        .language-content[lang="fa"] li::before {
+            left: auto;
+            right: 0;
+        }
+        .language-content[lang="fa"] footer {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
-
-    <div class="container" id="contentRoot">
+    <div class="container">
         <header>
-            <div class="lang-switcher" id="langSwitcher">
-                <button class="lang-btn active" data-lang="en"><span>EN</span></button>
-                <button class="lang-btn" data-lang="de"><span>DE</span></button>
-                <button class="lang-btn" data-lang="fa"><span>FA</span></button>
-            </div>
-
             <div class="logo-container">
-                <div class="app-name" id="appName">Leit</div>
+                <div class="app-name">Leit</div>
             </div>
-            <h1 id="pageTitle">Privacy Policy</h1>
-            <div class="date" id="effectiveDate">Effective Date: December 2, 2025</div>
         </header>
 
-        <div id="sectionsRoot">
-            <!-- Sections will be injected by JavaScript based on selected language -->
+        <div class="language-switcher">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="fa">فارسی</option>
+            </select>
         </div>
 
-        <footer>
-            <span id="footerText">&copy; 2025 Leit. Developed by Mahdi Ehsani. All rights reserved.</span>
-        </footer>
-    </div>
+        <div id="content-en" class="language-content" lang="en">
+            <h1>Privacy Policy</h1>
+            <div class="date">Effective Date: December 1, 2025</div>
+            <div class="section-card">
+                <h2>1. Introduction</h2>
+                <p><strong>Mahdi Ehsani</strong> (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how our mobile application, <strong>Leit</strong> (the “App”), collects, uses, and safeguards your personal information. By installing or using the App, you acknowledge and agree to the practices described in this Privacy Policy.</p>
+            </div>
+            <div class="section-card">
+                <h2>2. Information We Collect</h2>
+               
+                <h3>A. Personal Information</h3>
+                <p>When you sign in to the App, we may collect certain personal information through third-party authentication providers such as Google Sign-In. This may include:</p>
+                <ul>
+                    <li>Email address</li>
+                    <li>Name and profile picture (if available)</li>
+                    <li>User ID generated by the authentication provider</li>
+                </ul>
+                <h3>B. User Content and Cloud Backups</h3>
+                <p>A core feature of the App is the ability to save and restore your learning progress.</p>
+                <p><strong>Cloud Backups:</strong> When you use the “Backup to Cloud” feature, the App uploads an encrypted file containing your vocabulary lists, examples, and Leitner box progress to your private storage space on Google Firebase Storage.</p>
+                <p>This data is used solely to restore your data across devices or after reinstallation. We do not access, analyze, or share your learning content for any purpose other than providing backup and restore functionality.</p>
+                <h3>C. Device and Usage Data</h3>
+                <p>To understand how the App is used and to improve its stability and performance, we may collect certain non-personal data, including:</p>
+                <ul>
+                    <li>Device model and operating system version</li>
+                    <li>Anonymized IP address</li>
+                    <li>Crash reports (e.g., via Firebase Crashlytics)</li>
+                    <li>Basic interaction metrics (such as screens visited and features used)</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2>3. How We Use Your Information</h2>
+                <p>We use the collected information for the following purposes:</p>
+                <ul>
+                    <li><strong>Service Provision:</strong> To authenticate your identity, synchronize your progress, and securely store your cloud backups.</li>
+                    <li><strong>App Improvement:</strong> To detect bugs, prevent crashes, and understand user preferences in order to improve the App and future updates.</li>
+                    <li><strong>Communication:</strong> To send important system notifications, such as updates to this Privacy Policy, security alerts, or critical service-related messages.</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2>4. Third-Party Services</h2>
+                <p>We utilize trusted third-party services to facilitate the App’s functionality. These providers adhere to their own privacy policies. The main services we use include:</p>
+                <ul>
+                    <li><strong>Google Firebase</strong> (Authentication, Storage, Analytics, Crashlytics): Used for user authentication, secure data storage, and app analytics.</li>
+                    <li><strong>Firebase Cloud Messaging (FCM):</strong> Used to deliver push notifications and reminders.</li>
+                </ul>
+                <p>You are encouraged to review the privacy policies of these third-party providers for more information on how they handle your data.</p>
+            </div>
+            <div class="section-card">
+                <h2>5. App Permissions</h2>
+                <p>To function correctly, the App may require access to certain device features:</p>
+                <ul>
+                    <li><strong>Internet:</strong> Required to sign in, synchronize data, and upload/download cloud backups.</li>
+                    <li><strong>Storage:</strong> Required to create temporary backup files before uploading them to the cloud.</li>
+                    <li><strong>Microphone (if applicable):</strong> May be requested if you use speech-to-text features or pronunciation practice tools.</li>
+                </ul>
+                <p>We only request permissions that are necessary for the core functionality of the App.</p>
+            </div>
+            <div class="section-card">
+                <h2>6. Data Security</h2>
+                <p>We implement industry-standard security measures to protect your data. Your cloud backups are stored on secure Google Firebase servers, and access is restricted to your authenticated account.</p>
+                <p>However, please be aware that no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+            </div>
+            <div class="section-card">
+                <h2>7. Data Deletion and Your Rights</h2>
+                <p>You have the right to delete your account and all associated data at any time.</p>
+               
+                <h3>In-App Deletion</h3>
+                <p>You can delete your data by navigating to <strong>Settings > Clear All Data</strong> within the App. This action will remove your local data, your cloud backup file, and your account information associated with the App.</p>
+                <h3>Request via Email</h3>
+                <p>If you cannot access the App, you may request full account deletion by contacting us using the link below with the subject line “Account Deletion Request.” We will process such requests within a reasonable timeframe.</p>
+               
+                <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="contact-btn">Request Data Deletion</a>
+            </div>
+            <div class="section-card">
+                <h2>8. Children’s Privacy</h2>
+                <p>The App is intended for general audiences and is not specifically directed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+                <p>If we become aware that we have inadvertently collected personal information from a child under 13, we will take steps to delete such information as soon as reasonably possible. If you believe that a child under 13 has provided us with personal information, please contact us.</p>
+            </div>
+            <div class="section-card">
+                <h2>9. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated “Effective Date.”</p>
+                <p>You are advised to review this Privacy Policy periodically for any changes. Your continued use of the App after any modifications to this Privacy Policy will constitute your acknowledgment of the modifications and your consent to abide by the updated policy.</p>
+            </div>
+            <div class="section-card">
+                <h2>10. Contact Us</h2>
+                <p>If you have any questions, concerns, or suggestions about this Privacy Policy or our data practices, please contact us at:</p>
+                <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="contact-btn">mahdi.ehsani.afghan@gmail.com</a>
+            </div>
+            <footer>
+                <span>&copy; 2025 Leit. Developed by Mahdi Ehsani. All rights reserved.</span>
+            </footer>
+        </div>
 
+        <div id="content-de" class="language-content" lang="de" style="display: none;">
+            <h1>Datenschutzrichtlinie</h1>
+            <div class="date">Gültig ab: 1. Dezember 2025</div>
+            <div class="section-card">
+                <h2>1. Einführung</h2>
+                <p><strong>Mahdi Ehsani</strong> („wir“, „unser“ oder „uns“) verpflichtet sich, Ihre Privatsphäre zu schützen. Diese Datenschutzrichtlinie erklärt, wie unsere mobile Anwendung <strong>Leit</strong> (die „App“) Ihre persönlichen Informationen sammelt, verwendet und schützt. Durch die Installation oder Nutzung der App erkennen Sie die in dieser Datenschutzrichtlinie beschriebenen Praktiken an und stimmen ihnen zu.</p>
+            </div>
+            <div class="section-card">
+                <h2>2. Informationen, die wir sammeln</h2>
+               
+                <h3>A. Persönliche Informationen</h3>
+                <p>Wenn Sie sich in der App anmelden, sammeln wir möglicherweise bestimmte persönliche Informationen über Drittanbieter-Authentifizierungsdienste wie Google Sign-In. Dies kann umfassen:</p>
+                <ul>
+                    <li>E-Mail-Adresse</li>
+                    <li>Name und Profilbild (falls verfügbar)</li>
+                    <li>Benutzer-ID, die vom Authentifizierungsanbieter generiert wird</li>
+                </ul>
+                <h3>B. Benutzerinhalte und Cloud-Backups</h3>
+                <p>Eine Kernfunktion der App ist die Möglichkeit, Ihren Lernfortschritt zu speichern und wiederherzustellen.</p>
+                <p><strong>Cloud-Backups:</strong> Wenn Sie die Funktion „Backup in die Cloud“ verwenden, lädt die App eine verschlüsselte Datei hoch, die Ihre Vokabellisten, Beispiele und den Fortschritt Ihrer Leitner-Box enthält, in Ihren privaten Speicherplatz auf Google Firebase Storage.</p>
+                <p>Diese Daten werden ausschließlich verwendet, um Ihre Daten über Geräte hinweg oder nach einer Neuinstallation wiederherzustellen. Wir greifen nicht auf Ihre Lerninhalte zu, analysieren oder teilen sie für andere Zwecke als die Bereitstellung der Backup- und Wiederherstellungsfunktion.</p>
+                <h3>C. Geräte- und Nutzungsdaten</h3>
+                <p>Um zu verstehen, wie die App genutzt wird und um ihre Stabilität und Leistung zu verbessern, sammeln wir möglicherweise bestimmte nicht-personenbezogene Daten, einschließlich:</p>
+                <ul>
+                    <li>Gerätemodell und Betriebssystemversion</li>
+                    <li>Anonymisierte IP-Adresse</li>
+                    <li>Absturzberichte (z. B. über Firebase Crashlytics)</li>
+                    <li>Grundlegende Interaktionsmetriken (wie besuchte Bildschirme und genutzte Funktionen)</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2>3. Wie wir Ihre Informationen verwenden</h2>
+                <p>Wir verwenden die gesammelten Informationen für die folgenden Zwecke:</p>
+                <ul>
+                    <li><strong>Dienstleistungsbereitstellung:</strong> Um Ihre Identität zu authentifizieren, Ihren Fortschritt zu synchronisieren und Ihre Cloud-Backups sicher zu speichern.</li>
+                    <li><strong>App-Verbesserung:</strong> Um Fehler zu erkennen, Abstürze zu verhindern und Benutzerpräferenzen zu verstehen, um die App und zukünftige Updates zu verbessern.</li>
+                    <li><strong>Kommunikation:</strong> Um wichtige Systembenachrichtigungen zu senden, wie Updates zu dieser Datenschutzrichtlinie, Sicherheitswarnungen oder kritische dienstbezogene Nachrichten.</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2>4. Drittanbieter-Dienste</h2>
+                <p>Wir nutzen vertrauenswürdige Drittanbieter-Dienste, um die Funktionalität der App zu erleichtern. Diese Anbieter halten sich an ihre eigenen Datenschutzrichtlinien. Die wichtigsten Dienste, die wir verwenden, umfassen:</p>
+                <ul>
+                    <li><strong>Google Firebase</strong> (Authentifizierung, Speicher, Analytics, Crashlytics): Wird für Benutzerauthentifizierung, sichere Datenspeicherung und App-Analytics verwendet.</li>
+                    <li><strong>Firebase Cloud Messaging (FCM):</strong> Wird verwendet, um Push-Benachrichtigungen und Erinnerungen zu übermitteln.</li>
+                </ul>
+                <p>Sie werden ermutigt, die Datenschutzrichtlinien dieser Drittanbieter zu überprüfen, um mehr darüber zu erfahren, wie sie Ihre Daten handhaben.</p>
+            </div>
+            <div class="section-card">
+                <h2>5. App-Berechtigungen</h2>
+                <p>Um korrekt zu funktionieren, erfordert die App möglicherweise Zugriff auf bestimmte Gerätefunktionen:</p>
+                <ul>
+                    <li><strong>Internet:</strong> Erforderlich zum Anmelden, Synchronisieren von Daten und Hochladen/Herunterladen von Cloud-Backups.</li>
+                    <li><strong>Speicher:</strong> Erforderlich, um temporäre Backup-Dateien zu erstellen, bevor sie in die Cloud hochgeladen werden.</li>
+                    <li><strong>Mikrofon (falls zutreffend):</strong> Kann angefordert werden, wenn Sie Sprach-zu-Text-Funktionen oder Aussprache-Übungstools verwenden.</li>
+                </ul>
+                <p>Wir fordern nur Berechtigungen an, die für die Kernfunktionalität der App notwendig sind.</p>
+            </div>
+            <div class="section-card">
+                <h2>6. Datensicherheit</h2>
+                <p>Wir implementieren branchenübliche Sicherheitsmaßnahmen, um Ihre Daten zu schützen. Ihre Cloud-Backups werden auf sicheren Google Firebase-Servern gespeichert, und der Zugriff ist auf Ihr authentifiziertes Konto beschränkt.</p>
+                <p>Bitte beachten Sie jedoch, dass keine Methode der Übertragung über das Internet oder der elektronischen Speicherung zu 100% sicher ist. Obwohl wir uns bemühen, kommerziell akzeptable Mittel zum Schutz Ihrer persönlichen Informationen zu verwenden, können wir deren absolute Sicherheit nicht garantieren.</p>
+            </div>
+            <div class="section-card">
+                <h2>7. Datenlöschung und Ihre Rechte</h2>
+                <p>Sie haben das Recht, Ihr Konto und alle zugehörigen Daten jederzeit zu löschen.</p>
+               
+                <h3>Löschung in der App</h3>
+                <p>Sie können Ihre Daten löschen, indem Sie in der App zu <strong>Einstellungen > Alle Daten löschen</strong> navigieren. Diese Aktion entfernt Ihre lokalen Daten, Ihre Cloud-Backup-Datei und Ihre mit der App verbundenen Kontoinformationen.</p>
+                <h3>Anfrage per E-Mail</h3>
+                <p>Wenn Sie nicht auf die App zugreifen können, können Sie die vollständige Konto-Löschung anfordern, indem Sie uns über den unten stehenden Link mit der Betreffzeile „Anfrage zur Konto-Löschung“ kontaktieren. Wir bearbeiten solche Anfragen in einem angemessenen Zeitrahmen.</p>
+               
+                <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="contact-btn">Datenlöschung anfordern</a>
+            </div>
+            <div class="section-card">
+                <h2>8. Datenschutz für Kinder</h2>
+                <p>Die App ist für ein allgemeines Publikum gedacht und richtet sich nicht speziell an Kinder unter 13 Jahren. Wir sammeln wissentlich keine persönlichen Informationen von Kindern unter 13 Jahren.</p>
+                <p>Wenn wir feststellen, dass wir unbeabsichtigt persönliche Informationen von einem Kind unter 13 Jahren gesammelt haben, werden wir Maßnahmen ergreifen, um solche Informationen so schnell wie möglich zu löschen. Wenn Sie glauben, dass ein Kind unter 13 Jahren uns persönliche Informationen zur Verfügung gestellt hat, kontaktieren Sie uns bitte.</p>
+            </div>
+            <div class="section-card">
+                <h2>9. Änderungen an dieser Richtlinie</h2>
+                <p>Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten „Gültig ab“-Datum veröffentlicht.</p>
+                <p>Sie werden empfohlen, diese Datenschutzrichtlinie regelmäßig auf Änderungen zu überprüfen. Ihre fortgesetzte Nutzung der App nach Änderungen an dieser Datenschutzrichtlinie stellt Ihre Anerkennung der Änderungen und Ihre Zustimmung dar, an die aktualisierte Richtlinie gebunden zu sein.</p>
+            </div>
+            <div class="section-card">
+                <h2>10. Kontaktieren Sie uns</h2>
+                <p>Wenn Sie Fragen, Bedenken oder Vorschläge zu dieser Datenschutzrichtlinie oder unseren Datenschutzpraktiken haben, kontaktieren Sie uns bitte unter:</p>
+                <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="contact-btn">mahdi.ehsani.afghan@gmail.com</a>
+            </div>
+            <footer>
+                <span>&copy; 2025 Leit. Entwickelt von Mahdi Ehsani. Alle Rechte vorbehalten.</span>
+            </footer>
+        </div>
+
+        <div id="content-fa" class="language-content" lang="fa" style="display: none;">
+            <h1>سیاست حفظ حریم خصوصی</h1>
+            <div class="date">تاریخ موثر: ۱ دسامبر ۲۰۲۵</div>
+            <div class="section-card">
+                <h2>۱. مقدمه</h2>
+                <p><strong>مهدی احسانی</strong> («ما»، «ما» یا «ما») متعهد به حفاظت از حریم خصوصی شما است. این سیاست حفظ حریم خصوصی توضیح می‌دهد که چگونه برنامه موبایل ما، <strong>Leit</strong> («برنامه»)، اطلاعات شخصی شما را جمع‌آوری، استفاده و حفاظت می‌کند. با نصب یا استفاده از برنامه، شما تصدیق و موافقت با شیوه‌های توصیف شده در این سیاست حفظ حریم خصوصی را دارید.</p>
+            </div>
+            <div class="section-card">
+                <h2>۲. اطلاعاتی که جمع‌آوری می‌کنیم</h2>
+               
+                <h3>الف. اطلاعات شخصی</h3>
+                <p>وقتی به برنامه وارد می‌شوید، ممکن است اطلاعات شخصی خاصی را از طریق ارائه‌دهندگان احراز هویت سوم شخص مانند Google Sign-In جمع‌آوری کنیم. این ممکن است شامل:</p>
+                <ul>
+                    <li>آدرس ایمیل</li>
+                    <li>نام و عکس پروفایل (اگر موجود باشد)</li>
+                    <li>شناسه کاربر تولید شده توسط ارائه‌دهنده احراز هویت</li>
+                </ul>
+                <h3>ب. محتوای کاربر و پشتیبان‌گیری ابری</h3>
+                <p>یک ویژگی اصلی برنامه، توانایی ذخیره و بازیابی پیشرفت یادگیری شما است.</p>
+                <p><strong>پشتیبان‌گیری ابری:</strong> وقتی از ویژگی «پشتیبان‌گیری به ابر» استفاده می‌کنید، برنامه یک فایل رمزگذاری شده حاوی لیست واژگان، مثال‌ها و پیشرفت جعبه لایتنر شما را به فضای ذخیره‌سازی خصوصی شما در Google Firebase Storage آپلود می‌کند.</p>
+                <p>این داده‌ها تنها برای بازیابی داده‌های شما در دستگاه‌های مختلف یا پس از نصب مجدد استفاده می‌شود. ما به محتوای یادگیری شما دسترسی، تحلیل یا به اشتراک نمی‌گذاریم برای هیچ هدفی جز ارائه عملکرد پشتیبان‌گیری و بازیابی.</p>
+                <h3>ج. داده‌های دستگاه و استفاده</h3>
+                <p>برای درک نحوه استفاده از برنامه و بهبود پایداری و عملکرد آن، ممکن است داده‌های غیرشخصی خاصی را جمع‌آوری کنیم، شامل:</p>
+                <ul>
+                    <li>مدل دستگاه و نسخه سیستم عامل</li>
+                    <li>آدرس IP ناشناس</li>
+                    <li>گزارش‌های سقوط (مثلاً از طریق Firebase Crashlytics)</li>
+                    <li>معیارهای تعامل پایه (مانند صفحه‌های بازدید شده و ویژگی‌های استفاده شده)</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2>۳. نحوه استفاده از اطلاعات شما</h2>
+                <p>ما از اطلاعات جمع‌آوری شده برای اهداف زیر استفاده می‌کنیم:</p>
+                <ul>
+                    <li><strong>ارائه خدمات:</strong> برای احراز هویت شما، همگام‌سازی پیشرفت شما و ذخیره امن پشتیبان‌گیری‌های ابری شما.</li>
+                    <li><strong>بهبود برنامه:</strong> برای تشخیص باگ‌ها، جلوگیری از سقوط‌ها و درک ترجیحات کاربر به منظور بهبود برنامه و به‌روزرسانی‌های آینده.</li>
+                    <li><strong>ارتباط:</strong> برای ارسال اعلان‌های مهم سیستم، مانند به‌روزرسانی‌های این سیاست حفظ حریم خصوصی، هشدارهای امنیتی یا پیام‌های مرتبط با خدمات حیاتی.</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2>۴. خدمات سوم شخص</h2>
+                <p>ما از خدمات سوم شخص معتبر برای تسهیل عملکرد برنامه استفاده می‌کنیم. این ارائه‌دهندگان به سیاست‌های حفظ حریم خصوصی خود پایبند هستند. خدمات اصلی که ما استفاده می‌کنیم شامل:</p>
+                <ul>
+                    <li><strong>Google Firebase</strong> (احراز هویت، ذخیره‌سازی، تحلیل، Crashlytics): برای احراز هویت کاربر، ذخیره‌سازی امن داده و تحلیل برنامه استفاده می‌شود.</li>
+                    <li><strong>Firebase Cloud Messaging (FCM):</strong> برای ارسال اعلان‌های پوش و یادآوری‌ها استفاده می‌شود.</li>
+                </ul>
+                <p>شما تشویق می‌شوید سیاست‌های حفظ حریم خصوصی این ارائه‌دهندگان سوم شخص را بررسی کنید تا اطلاعات بیشتری در مورد نحوه مدیریت داده‌های شما بدست آورید.</p>
+            </div>
+            <div class="section-card">
+                <h2>۵. مجوزهای برنامه</h2>
+                <p>برای عملکرد صحیح، برنامه ممکن است نیاز به دسترسی به ویژگی‌های خاصی از دستگاه داشته باشد:</p>
+                <ul>
+                    <li><strong>اینترنت:</strong> لازم برای ورود، همگام‌سازی داده‌ها و آپلود/دانلود پشتیبان‌گیری‌های ابری.</li>
+                    <li><strong>ذخیره‌سازی:</strong> لازم برای ایجاد فایل‌های پشتیبان موقت قبل از آپلود به ابر.</li>
+                    <li><strong>میکروفون (اگر適用):</strong> ممکن است درخواست شود اگر از ویژگی‌های گفتار به متن یا ابزارهای تمرین تلفظ استفاده کنید.</li>
+                </ul>
+                <p>ما فقط مجوزهایی را درخواست می‌کنیم که برای عملکرد اصلی برنامه ضروری هستند.</p>
+            </div>
+            <div class="section-card">
+                <h2>۶. امنیت داده</h2>
+                <p>ما اقدامات امنیتی استاندارد صنعت را برای حفاظت از داده‌های شما پیاده‌سازی می‌کنیم. پشتیبان‌گیری‌های ابری شما در سرورهای امن Google Firebase ذخیره می‌شوند و دسترسی به حساب احراز هویت شده شما محدود است.</p>
+                <p>با این حال، لطفاً آگاه باشید که هیچ روش انتقال از طریق اینترنت یا ذخیره‌سازی الکترونیکی ۱۰۰٪ امن نیست. در حالی که ما تلاش می‌کنیم از وسایل قابل قبول تجاری برای حفاظت از اطلاعات شخصی شما استفاده کنیم، نمی‌توانیم امنیت مطلق آن را تضمین کنیم.</p>
+            </div>
+            <div class="section-card">
+                <h2>۷. حذف داده و حقوق شما</h2>
+                <p>شما حق دارید حساب خود و تمام داده‌های مرتبط را در هر زمان حذف کنید.</p>
+               
+                <h3>حذف در برنامه</h3>
+                <p>شما می‌توانید داده‌های خود را با رفتن به <strong>تنظیمات > پاک کردن تمام داده‌ها</strong> در برنامه حذف کنید. این عمل داده‌های محلی شما، فایل پشتیبان ابری شما و اطلاعات حساب مرتبط با برنامه را حذف می‌کند.</p>
+                <h3>درخواست از طریق ایمیل</h3>
+                <p>اگر نمی‌توانید به برنامه دسترسی داشته باشید، می‌توانید حذف کامل حساب را با تماس با ما از طریق لینک زیر با خط موضوع «درخواست حذف حساب» درخواست کنید. ما چنین درخواست‌هایی را در زمان معقولی پردازش می‌کنیم.</p>
+               
+                <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="contact-btn">درخواست حذف داده</a>
+            </div>
+            <div class="section-card">
+                <h2>۸. حفظ حریم خصوصی کودکان</h2>
+                <p>برنامه برای مخاطبان عمومی در نظر گرفته شده و به طور خاص برای کودکان زیر ۱۳ سال هدایت نشده است. ما آگاهانه اطلاعات شخصی از کودکان زیر ۱۳ سال جمع‌آوری نمی‌کنیم.</p>
+                <p>اگر آگاه شویم که به طور ناخواسته اطلاعات شخصی از یک کودک زیر ۱۳ سال جمع‌آوری کرده‌ایم، گام‌هایی برای حذف چنین اطلاعاتی در اسرع وقت برمی‌داریم. اگر باور دارید که یک کودک زیر ۱۳ سال اطلاعات شخصی به ما ارائه داده است، لطفاً با ما تماس بگیرید.</p>
+            </div>
+            <div class="section-card">
+                <h2>۹. تغییرات در این سیاست</h2>
+                <p>ما ممکن است این سیاست حفظ حریم خصوصی را از زمان به زمان به‌روزرسانی کنیم. هر تغییری با تاریخ موثر به‌روزرسانی شده در این صفحه پست خواهد شد.</p>
+                <p>به شما توصیه می‌شود این سیاست حفظ حریم خصوصی را به طور دوره‌ای برای هر تغییری بررسی کنید. استفاده مداوم شما از برنامه پس از هر تغییری در این سیاست حفظ حریم خصوصی، تصدیق شما از تغییرات و موافقت شما با پایبندی به سیاست به‌روزرسانی شده را تشکیل می‌دهد.</p>
+            </div>
+            <div class="section-card">
+                <h2>۱۰. تماس با ما</h2>
+                <p>اگر سؤال، نگرانی یا پیشنهادی در مورد این سیاست حفظ حریم خصوصی یا شیوه‌های داده ما دارید، لطفاً با ما تماس بگیرید در:</p>
+                <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="contact-btn">mahdi.ehsani.afghan@gmail.com</a>
+            </div>
+            <footer>
+                <span>&copy; ۲۰۲۵ Leit. توسعه‌یافته توسط مهدی احسانی. تمام حقوق محفوظ است.</span>
+            </footer>
+        </div>
+    </div>
     <script>
         // Scroll Progress Bar Script
         window.onscroll = function() {
@@ -459,410 +624,35 @@
             document.getElementById("progressBar").style.width = scrolled + "%";
         };
 
-        const translations = {
-            en: {
-                lang: 'en',
-                dir: 'ltr',
-                appName: 'Leit',
-                pageTitle: 'Privacy Policy',
-                effectiveDate: 'Effective Date: December 2, 2025',
-                footer: '&copy; 2025 Leit. Developed by Mahdi Ehsani. All rights reserved.',
-                sections: `
-        <div class="section-card">
-            <h2>1. Introduction</h2>
-            <p><strong>Mahdi Ehsani</strong> (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how our mobile application, <strong>Leit</strong> (the “App”), collects, uses, and safeguards your personal information. By installing or using the App, you acknowledge and agree to the practices described in this Privacy Policy.</p>
-        </div>
+        // Language Switcher Script
+        const select = document.getElementById('language-select');
+        const contents = document.querySelectorAll('.language-content');
+        const html = document.documentElement;
 
-        <div class="section-card">
-            <h2>2. Information We Collect</h2>
+        select.addEventListener('change', (e) => {
+            const newLang = e.target.value;
+            const current = document.querySelector('.language-content:not([style*="display: none"])');
             
-            <h3>A. Personal Information</h3>
-            <p>When you sign in to the App, we may collect certain personal information through third-party authentication providers such as Google Sign-In. This may include:</p>
-            <ul>
-                <li>Email address</li>
-                <li>Name and profile picture (if available)</li>
-                <li>User ID generated by the authentication provider</li>
-            </ul>
-
-            <h3>B. User Content and Cloud Backups</h3>
-            <p>A core feature of the App is the ability to save and restore your learning progress.</p>
-            <p><strong>Cloud Backups:</strong> When you use the “Backup to Cloud” feature, the App uploads an encrypted file containing your vocabulary lists, examples, and Leitner box progress to your private storage space on Google Firebase Storage.</p>
-            <p>This data is used solely to restore your data across devices or after reinstallation. We do not access, analyze, or share your learning content for any purpose other than providing backup and restore functionality.</p>
-
-            <h3>C. Device and Usage Data</h3>
-            <p>To understand how the App is used and to improve its stability and performance, we may collect certain non-personal data, including:</p>
-            <ul>
-                <li>Device model and operating system version</li>
-                <li>Anonymized IP address</li>
-                <li>Crash reports (e.g., via Firebase Crashlytics)</li>
-                <li><strong>Text-to-Speech (TTS) Data:</strong> The App utilizes the device's native text-to-speech engine for pronunciation. This data is typically processed locally on your device depending on your system settings.</li>
-            </ul>
-        </div>
-
-        <div class="section-card">
-            <h2>3. How We Use Your Information</h2>
-            <p>We use the collected information for the following purposes:</p>
-            <ul>
-                <li><strong>Service Provision:</strong> To authenticate your identity, synchronize your progress, and securely store your cloud backups.</li>
-                <li><strong>App Improvement:</strong> To detect bugs, prevent crashes, and understand user preferences in order to improve the App and future updates.</li>
-                <li><strong>Local Notifications:</strong> To schedule offline daily reminders on your device that help you maintain your learning streak.</li>
-                <li><strong>Communication:</strong> To send important system notifications, such as updates to this Privacy Policy, security alerts, or critical service-related messages.</li>
-            </ul>
-        </div>
-
-        <div class="section-card">
-            <h2>4. Third-Party Services</h2>
-            <p>We utilize trusted third-party services to facilitate the App’s functionality. These providers adhere to their own privacy policies. The main services we use include:</p>
-            <ul>
-                <li><strong>Google Firebase</strong> (Authentication, Storage, Analytics, Crashlytics): Used for user authentication, secure data storage, and app analytics.</li>
-                <li><strong>Firebase Cloud Messaging (FCM):</strong> Used to deliver critical system push notifications.</li>
-                <li><strong>Firebase Remote Config:</strong> Used to update basic app configurations and feature flags without requiring a full app update.</li>
-            </ul>
-            <p>You are encouraged to review the privacy policies of these third-party providers for more information on how they handle your data.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>5. App Permissions</h2>
-            <p>To function correctly, the App may require access to certain device features:</p>
-            <ul>
-                <li><strong>Internet:</strong> Required to sign in, synchronize data, and upload/download cloud backups.</li>
-                <li><strong>Storage:</strong> Required to create temporary backup files before uploading them to the cloud.</li>
-                <li><strong>Notifications:</strong> Required to send you scheduled daily reminders for your Leitner box reviews.</li>
-            </ul>
-            <p>We only request permissions that are necessary for the core functionality of the App.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>6. Data Security</h2>
-            <p>We implement industry-standard security measures to protect your data. Your cloud backups are stored on secure Google Firebase servers, and access is restricted to your authenticated account.</p>
-            <p>However, please be aware that no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>7. Data Deletion and Your Rights</h2>
-            <p>You have the right to delete your account and all associated data at any time.</p>
-            
-            <h3>In-App Deletion</h3>
-            <p>You can delete your data by navigating to <strong>Settings &gt; Delete Account</strong> within the App. This action will permanently remove your local data, your cloud backup file, and your account information associated with the App.</p>
-
-            <h3>Request via Email</h3>
-            <p>If you cannot access the App, you may request full account deletion by contacting us using the link below with the subject line “Account Deletion Request.” We will process such requests within a reasonable timeframe.</p>
-            
-            <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="contact-btn">Request Data Deletion</a>
-        </div>
-
-        <div class="section-card">
-            <h2>8. Children’s Privacy</h2>
-            <p>The App is intended for general audiences and is not specifically directed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
-            <p>If we become aware that we have inadvertently collected personal information from a child under 13, we will take steps to delete such information as soon as reasonably possible. If you believe that a child under 13 has provided us with personal information, please contact us.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>9. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated “Effective Date.”</p>
-            <p>You are advised to review this Privacy Policy periodically for any changes. Your continued use of the App after any modifications to this Privacy Policy will constitute your acknowledgment of the modifications and your consent to abide by the updated policy.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>10. Contact Us</h2>
-            <p>If you have any questions, concerns, or suggestions about this Privacy Policy or our data practices, please contact us at:</p>
-            <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="contact-btn">mahdi.ehsani.afghan@gmail.com</a>
-        </div>
-                `
-            },
-            de: {
-                lang: 'de',
-                dir: 'ltr',
-                appName: 'Leit',
-                pageTitle: 'Datenschutzerklärung',
-                effectiveDate: 'Gültig ab: 2. Dezember 2025',
-                footer: '&copy; 2025 Leit. Entwickelt von Mahdi Ehsani. Alle Rechte vorbehalten.',
-                sections: `
-        <div class="section-card">
-            <h2>1. Einleitung</h2>
-            <p><strong>Mahdi Ehsani</strong> („wir“, „uns“ oder „unser“) fühlt sich dem Schutz deiner Privatsphäre verpflichtet. Diese Datenschutzerklärung erläutert, wie unsere mobile Anwendung <strong>Leit</strong> (die „App“) deine personenbezogenen Daten erfasst, verwendet und schützt. Durch die Installation oder Nutzung der App erkennst du die in dieser Datenschutzerklärung beschriebenen Praktiken an und stimmst ihnen zu.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>2. Welche Daten wir erfassen</h2>
-            
-            <h3>A. Personenbezogene Daten</h3>
-            <p>Wenn du dich in der App anmeldest, können wir bestimmte personenbezogene Daten über Drittanbieter für die Authentifizierung, wie z.&nbsp;B. Google Sign-In, erfassen. Dazu können gehören:</p>
-            <ul>
-                <li>E-Mail-Adresse</li>
-                <li>Name und Profilbild (falls verfügbar)</li>
-                <li>Von dem Authentifizierungsanbieter generierte Benutzer-ID</li>
-            </ul>
-
-            <h3>B. Nutzungsinhalte und Cloud-Backups</h3>
-            <p>Ein zentrales Merkmal der App ist die Möglichkeit, deinen Lernfortschritt zu speichern und wiederherzustellen.</p>
-            <p><strong>Cloud-Backups:</strong> Wenn du die Funktion „Backup in der Cloud“ verwendest, lädt die App eine verschlüsselte Datei hoch, die deine Vokabellisten, Beispiele und deinen Leitner-Box-Fortschritt in deinen privaten Speicherbereich bei Google Firebase Storage enthält.</p>
-            <p>Diese Daten werden ausschließlich dazu verwendet, deine Daten auf verschiedenen Geräten oder nach einer Neuinstallation wiederherzustellen. Wir greifen nicht auf deine Lerninhalte zu, analysieren sie nicht und teilen sie nicht für andere Zwecke als die Bereitstellung von Backup- und Wiederherstellungsfunktionen.</p>
-
-            <h3>C. Geräte- und Nutzungsdaten</h3>
-            <p>Um zu verstehen, wie die App genutzt wird, und um ihre Stabilität und Leistung zu verbessern, können wir bestimmte nicht-personenbezogene Daten erfassen, darunter:</p>
-            <ul>
-                <li>Gerätemodell und Version des Betriebssystems</li>
-                <li>Anononymisierte IP-Adresse</li>
-                <li>Absturzberichte (z.&nbsp;B. über Firebase Crashlytics)</li>
-                <li><strong>Text-to-Speech (TTS)-Daten:</strong> Die App nutzt die native Text-to-Speech-Engine deines Geräts für die Aussprache. Diese Daten werden in der Regel lokal auf deinem Gerät verarbeitet – je nach deinen Systemeinstellungen.</li>
-            </ul>
-        </div>
-
-        <div class="section-card">
-            <h2>3. Wie wir deine Daten verwenden</h2>
-            <p>Wir verwenden die erfassten Daten zu folgenden Zwecken:</p>
-            <ul>
-                <li><strong>Bereitstellung der Dienste:</strong> Zur Authentifizierung deiner Identität, zur Synchronisierung deines Fortschritts und zur sicheren Speicherung deiner Cloud-Backups.</li>
-                <li><strong>Verbesserung der App:</strong> Zur Erkennung von Fehlern, zur Vermeidung von Abstürzen und zum besseren Verständnis von Nutzerpräferenzen, um die App und zukünftige Updates zu verbessern.</li>
-                <li><strong>Lokale Benachrichtigungen:</strong> Zum Planen von täglichen Offline-Erinnerungen auf deinem Gerät, damit du deine Lernserie aufrechterhalten kannst.</li>
-                <li><strong>Kommunikation:</strong> Zum Versenden wichtiger Systemmitteilungen, z.&nbsp;B. Updates dieser Datenschutzerklärung, Sicherheitswarnungen oder kritischer servicebezogener Nachrichten.</li>
-            </ul>
-        </div>
-
-        <div class="section-card">
-            <h2>4. Dienste Dritter</h2>
-            <p>Wir nutzen vertrauenswürdige Dienste Dritter, um die Funktionalität der App zu ermöglichen. Diese Anbieter haben ihre eigenen Datenschutzrichtlinien. Die wichtigsten von uns genutzten Dienste sind:</p>
-            <ul>
-                <li><strong>Google Firebase</strong> (Authentication, Storage, Analytics, Crashlytics): Wird für die Benutzer-Authentifizierung, sichere Datenspeicherung und App-Analysen verwendet.</li>
-                <li><strong>Firebase Cloud Messaging (FCM):</strong> Wird für die Zustellung kritischer System-Push-Benachrichtigungen eingesetzt.</li>
-                <li><strong>Firebase Remote Config:</strong> Wird verwendet, um grundlegende App-Konfigurationen und Feature-Flags zu aktualisieren, ohne dass ein vollständiges App-Update erforderlich ist.</li>
-            </ul>
-            <p>Wir empfehlen dir, die Datenschutzrichtlinien dieser Drittanbieter zu lesen, um mehr darüber zu erfahren, wie sie deine Daten verarbeiten.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>5. App-Berechtigungen</h2>
-            <p>Damit die App ordnungsgemäß funktioniert, benötigt sie möglicherweise Zugriff auf bestimmte Gerätefunktionen:</p>
-            <ul>
-                <li><strong>Internet:</strong> Erforderlich für die Anmeldung, die Datensynchronisierung sowie das Hoch- und Herunterladen von Cloud-Backups.</li>
-                <li><strong>Speicher:</strong> Erforderlich, um temporäre Backup-Dateien zu erstellen, bevor sie in die Cloud hochgeladen werden.</li>
-                <li><strong>Benachrichtigungen:</strong> Erforderlich, um dir geplante tägliche Erinnerungen für deine Leitner-Box-Wiederholungen zu senden.</li>
-            </ul>
-            <p>Wir fordern nur Berechtigungen an, die für die Kernfunktionalität der App notwendig sind.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>6. Datensicherheit</h2>
-            <p>Wir setzen branchenübliche Sicherheitsmaßnahmen ein, um deine Daten zu schützen. Deine Cloud-Backups werden auf sicheren Google-Firebase-Servern gespeichert, und der Zugriff ist auf dein authentifiziertes Konto beschränkt.</p>
-            <p>Bitte beachte jedoch, dass keine Übertragungsmethode über das Internet und keine elektronische Speicherung zu 100&nbsp;% sicher ist. Obwohl wir uns bemühen, wirtschaftlich zumutbare Mittel zum Schutz deiner personenbezogenen Daten einzusetzen, können wir keine absolute Sicherheit garantieren.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>7. Datenlöschung und deine Rechte</h2>
-            <p>Du hast das Recht, dein Konto und alle damit verbundenen Daten jederzeit zu löschen.</p>
-            
-            <h3>Löschung in der App</h3>
-            <p>Du kannst deine Daten löschen, indem du in der App zu <strong>Einstellungen &gt; Konto löschen</strong> navigierst. Dieser Vorgang entfernt dauerhaft deine lokalen Daten, deine Cloud-Backup-Datei und die Kontoinformationen, die mit der App verknüpft sind.</p>
-
-            <h3>Anfrage per E-Mail</h3>
-            <p>Wenn du keinen Zugriff auf die App hast, kannst du die vollständige Löschung deines Kontos anfordern, indem du uns über den untenstehenden Link kontaktierst und als Betreff „Account Deletion Request“ angibst. Wir bearbeiten solche Anfragen innerhalb eines angemessenen Zeitraums.</p>
-            
-            <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="contact-btn">Löschung meiner Daten anfordern</a>
-        </div>
-
-        <div class="section-card">
-            <h2>8. Datenschutz von Kindern</h2>
-            <p>Die App richtet sich an ein allgemeines Publikum und ist nicht speziell für Kinder unter 13 Jahren ausgelegt. Wir erfassen nicht wissentlich personenbezogene Daten von Kindern unter 13 Jahren.</p>
-            <p>Wenn wir feststellen, dass wir versehentlich personenbezogene Daten eines Kindes unter 13 Jahren erfasst haben, werden wir angemessene Schritte unternehmen, um diese Daten so schnell wie möglich zu löschen. Wenn du glaubst, dass uns ein Kind unter 13 Jahren personenbezogene Daten bereitgestellt hat, kontaktiere uns bitte.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>9. Änderungen dieser Richtlinie</h2>
-            <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Alle Änderungen werden auf dieser Seite mit einem aktualisierten „Gültig ab“-Datum veröffentlicht.</p>
-            <p>Wir empfehlen dir, diese Datenschutzerklärung regelmäßig zu überprüfen. Deine fortgesetzte Nutzung der App nach Änderungen gilt als Anerkennung der Änderungen und als Einwilligung in die angepasste Richtlinie.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>10. Kontakt</h2>
-            <p>Wenn du Fragen, Bedenken oder Vorschläge zu dieser Datenschutzerklärung oder zu unseren Datenverarbeitungspraktiken hast, kontaktiere uns bitte unter:</p>
-            <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="contact-btn">mahdi.ehsani.afghan@gmail.com</a>
-        </div>
-                `
-            },
-            fa: {
-                lang: 'fa',
-                dir: 'rtl',
-                appName: 'لِیت',
-                pageTitle: 'سیاست حریم خصوصی',
-                effectiveDate: 'تاریخ اجرا: ۲ دسامبر ۲۰۲۵',
-                footer: '&copy; ۲۰۲۵ لِیت. توسعه داده شده توسط مهدی احسنی. تمامی حقوق محفوظ است.',
-                sections: `
-        <div class="section-card">
-            <h2>۱. مقدمه</h2>
-            <p><strong>مهدی احسنی</strong> («ما»، «ما» یا «ما») متعهد به حفاظت از حریم خصوصی شما است. این «سیاست حریم خصوصی» توضیح می‌دهد که برنامهٔ موبایل <strong>لِیت (Leit)</strong> («اپلیکیشن») چگونه اطلاعات شخصی شما را جمع‌آوری، استفاده و محافظت می‌کند. با نصب یا استفاده از اپلیکیشن، شما تأیید می‌کنید و می‌پذیرید که رویه‌های توضیح داده شده در این سیاست حریم خصوصی در مورد شما اعمال شود.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>۲. اطلاعاتی که جمع‌آوری می‌کنیم</h2>
-            
-            <h3>A. اطلاعات شخصی</h3>
-            <p>زمانی که در اپلیکیشن وارد حساب خود می‌شوید، ممکن است از طریق سرویس‌های احراز هویت شخص ثالث مانند Google Sign-In برخی اطلاعات شخصی شما جمع‌آوری شود. این اطلاعات می‌تواند شامل موارد زیر باشد:</p>
-            <ul>
-                <li>آدرس ایمیل</li>
-                <li>نام و تصویر پروفایل (در صورت موجود بودن)</li>
-                <li>شناسهٔ کاربر (User ID) تولید شده توسط سرویس احراز هویت</li>
-            </ul>
-
-            <h3>B. محتوای کاربر و پشتیبان‌گیری ابری</h3>
-            <p>یکی از قابلیت‌های اصلی اپلیکیشن، امکان ذخیره و بازیابی پیشرفت یادگیری شما است.</p>
-            <p><strong>پشتیبان‌گیری ابری:</strong> زمانی که از قابلیت «پشتیبان‌گیری در فضای ابری» استفاده می‌کنید، اپلیکیشن یک فایل رمزگذاری‌شده حاوی فهرست واژگان، مثال‌ها و وضعیت جعبهٔ لایتنر شما را در فضای ذخیره‌سازی خصوصی‌تان در Google Firebase Storage آپلود می‌کند.</p>
-            <p>این داده‌ها تنها به منظور بازیابی اطلاعات شما در دستگاه‌های مختلف یا پس از نصب مجدد اپلیکیشن استفاده می‌شوند. ما به محتوای یادگیری شما دسترسی مستقیم نداشته، آن را تحلیل نمی‌کنیم و برای هیچ هدف دیگری جز ارائهٔ قابلیت پشتیبان‌گیری و بازیابی، آن را به اشتراک نمی‌گذاریم.</p>
-
-            <h3>C. داده‌های دستگاه و نحوهٔ استفاده</h3>
-            <p>برای درک بهتر نحوهٔ استفاده از اپلیکیشن و بهبود پایداری و عملکرد آن، ممکن است برخی داده‌های غیرشخصی از شما جمع‌آوری شود، از جمله:</p>
-            <ul>
-                <li>مدل دستگاه و نسخهٔ سیستم‌عامل</li>
-                <li>آدرس IP ناشناس‌سازی شده</li>
-                <li>گزارش‌های خطا و کرش (برای مثال از طریق Firebase Crashlytics)</li>
-                <li><strong>داده‌های تبدیل متن به گفتار (TTS):</strong> اپلیکیشن از موتور تبدیل متن به گفتار داخلی دستگاه شما برای پخش تلفظ‌ها استفاده می‌کند. این داده‌ها معمولاً بسته به تنظیمات سیستم شما به‌صورت محلی روی دستگاه پردازش می‌شوند.</li>
-            </ul>
-        </div>
-
-        <div class="section-card">
-            <h2>۳. نحوهٔ استفاده ما از اطلاعات شما</h2>
-            <p>ما از اطلاعات جمع‌آوری شده برای اهداف زیر استفاده می‌کنیم:</p>
-            <ul>
-                <li><strong>ارائهٔ سرویس:</strong> برای احراز هویت شما، همگام‌سازی پیشرفت یادگیری و ذخیرهٔ امن پشتیبان‌های ابری شما.</li>
-                <li><strong>بهبود اپلیکیشن:</strong> برای شناسایی باگ‌ها، جلوگیری از کرش‌ها و درک بهتر ترجیحات کاربران جهت بهبود اپلیکیشن و به‌روزرسانی‌های آینده.</li>
-                <li><strong>اعلان‌های محلی (Local Notifications):</strong> برای زمان‌بندی یادآوری‌های روزانهٔ آفلاین روی دستگاه شما که به حفظ تداوم یادگیری‌تان کمک می‌کند.</li>
-                <li><strong>ارتباطات:</strong> برای ارسال اعلان‌های مهم سیستمی مثل به‌روزرسانی این سیاست حریم خصوصی، هشدارهای امنیتی یا پیام‌های حیاتی مرتبط با سرویس.</li>
-            </ul>
-        </div>
-
-        <div class="section-card">
-            <h2>۴. سرویس‌های شخص ثالث</h2>
-            <p>ما از سرویس‌های قابل اعتماد شخص ثالث برای فراهم کردن عملکردهای اپلیکیشن استفاده می‌کنیم. این ارائه‌دهندگان سیاست‌های حریم خصوصی جداگانهٔ خود را دارند. مهم‌ترین سرویس‌هایی که استفاده می‌کنیم عبارت‌اند از:</p>
-            <ul>
-                <li><strong>Google Firebase</strong> (Authentication, Storage, Analytics, Crashlytics): برای احراز هویت کاربر، ذخیره‌سازی امن داده‌ها و تحلیل استفاده از اپلیکیشن.</li>
-                <li><strong>Firebase Cloud Messaging (FCM):</strong> برای ارسال اعلان‌های پوشِ (Push) سیستمی مهم.</li>
-                <li><strong>Firebase Remote Config:</strong> برای به‌روزرسانی تنظیمات پایهٔ اپلیکیشن و فعال/غیرفعال کردن برخی قابلیت‌ها بدون نیاز به انتشار نسخهٔ جدید اپلیکیشن.</li>
-            </ul>
-            <p>توصیه می‌کنیم برای آگاهی بیش‌تر از نحوهٔ پردازش داده‌های شما توسط این ارائه‌دهندگان، سیاست‌های حریم خصوصی خود آن‌ها را مطالعه کنید.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>۵. دسترسی‌ها و مجوزهای اپلیکیشن</h2>
-            <p>برای عملکرد صحیح، اپلیکیشن ممکن است به برخی قابلیت‌های دستگاه شما نیاز داشته باشد:</p>
-            <ul>
-                <li><strong>اینترنت:</strong> برای ورود به حساب، همگام‌سازی داده‌ها و آپلود/دانلود پشتیبان‌های ابری مورد نیاز است.</li>
-                <li><strong>ذخیره‌سازی (Storage):</strong> برای ایجاد فایل‌های پشتیبان موقت قبل از آپلود آن‌ها در فضای ابری استفاده می‌شود.</li>
-                <li><strong>اعلان‌ها (Notifications):</strong> برای ارسال یادآوری‌های روزانهٔ زمان‌بندی‌شده جهت مرور کارت‌های جعبهٔ لایتنر شما لازم است.</li>
-            </ul>
-            <p>ما فقط مجوزهایی را درخواست می‌کنیم که برای ارائهٔ قابلیت‌های اصلی اپلیکیشن ضروری هستند.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>۶. امنیت داده‌ها</h2>
-            <p>ما از استانداردهای متداول صنعت برای حفاظت از داده‌های شما استفاده می‌کنیم. پشتیبان‌های ابری شما در سرورهای امن Google Firebase ذخیره می‌شوند و دسترسی به آن‌ها تنها از طریق حساب احراز هویت‌شدهٔ شما امکان‌پذیر است.</p>
-            <p>با این حال، لطفاً توجه داشته باشید که هیچ روش انتقال داده از طریق اینترنت و هیچ روش ذخیره‌سازی الکترونیکی به طور ۱۰۰٪ امن نیست. ما تمام تلاش خود را می‌کنیم تا از شیوه‌های معقول و متعارف برای حفاظت از اطلاعات شخصی شما استفاده کنیم، اما نمی‌توانیم امنیت مطلق را تضمین کنیم.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>۷. حذف داده‌ها و حقوق شما</h2>
-            <p>شما حق دارید هر زمان که بخواهید حساب کاربری خود و تمام داده‌های مرتبط با آن را حذف کنید.</p>
-            
-            <h3>حذف از داخل اپلیکیشن</h3>
-            <p>می‌توانید از طریق مسیر <strong>Settings &gt; Delete Account</strong> داخل اپلیکیشن، داده‌های خود را حذف کنید. این عمل، داده‌های محلی شما، فایل پشتیبان ابری و اطلاعات حساب مرتبط با اپلیکیشن را به‌صورت دائمی حذف خواهد کرد.</p>
-
-            <h3>درخواست از طریق ایمیل</h3>
-            <p>اگر به اپلیکیشن دسترسی ندارید، می‌توانید با استفاده از لینک زیر و با موضوع «Account Deletion Request» درخواست حذف کامل حساب خود را برای ما ارسال کنید. ما این درخواست‌ها را در یک بازهٔ زمانی معقول پردازش خواهیم کرد.</p>
-            
-            <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="contact-btn">درخواست حذف داده‌ها</a>
-        </div>
-
-        <div class="section-card">
-            <h2>۸. حریم خصوصی کودکان</h2>
-            <p>اپلیکیشن برای عموم کاربران طراحی شده و به‌طور خاص برای کودکان زیر ۱۳ سال در نظر گرفته نشده است. ما آگاهانه هیچ‌گونه اطلاعات شخصی از کودکان زیر ۱۳ سال جمع‌آوری نمی‌کنیم.</p>
-            <p>اگر متوجه شویم که به‌طور ناخواسته اطلاعات شخصی یک کودک زیر ۱۳ سال را جمع‌آوری کرده‌ایم، در اسرع وقت اقدام به حذف آن اطلاعات خواهیم کرد. اگر فکر می‌کنید کودکی زیر ۱۳ سال اطلاعات شخصی خود را در اختیار ما قرار داده است، لطفاً با ما تماس بگیرید.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>۹. تغییرات در این سیاست</h2>
-            <p>ممکن است هر از گاهی این سیاست حریم خصوصی را به‌روزرسانی کنیم. هرگونه تغییر در این صفحه و با به‌روزرسانی «تاریخ اجرا» منعکس خواهد شد.</p>
-            <p>توصیه می‌کنیم این سیاست حریم خصوصی را به‌صورت دوره‌ای مرور کنید. ادامهٔ استفادهٔ شما از اپلیکیشن پس از اعمال هرگونه تغییر، به منزلهٔ آگاهی و پذیرش شما نسبت به نسخهٔ به‌روزشده خواهد بود.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>۱۰. تماس با ما</h2>
-            <p>اگر هرگونه سؤال، نگرانی یا پیشنهادی دربارهٔ این سیاست حریم خصوصی یا نحوهٔ پردازش داده‌ها توسط ما دارید، لطفاً از طریق راه ارتباطی زیر با ما در تماس باشید:</p>
-            <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="contact-btn">mahdi.ehsani.afghan@gmail.com</a>
-        </div>
-                `
-            }
-        };
-
-        function applyLanguage(langKey, initial = false) {
-            const t = translations[langKey] || translations.en;
-
-            const html = document.documentElement;
-            const body = document.body;
-            html.lang = t.lang;
-            html.dir = t.dir;
-            body.setAttribute('dir', t.dir);
-
-            const contentRoot = document.getElementById('contentRoot');
-            const sectionsRoot = document.getElementById('sectionsRoot');
-            const pageTitle = document.getElementById('pageTitle');
-            const effectiveDate = document.getElementById('effectiveDate');
-            const footerText = document.getElementById('footerText');
-            const appName = document.getElementById('appName');
-
-            const switcherButtons = document.querySelectorAll('.lang-btn');
-            switcherButtons.forEach(btn => {
-                if (btn.dataset.lang === langKey) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
-            if (!initial) {
-                contentRoot.classList.remove('lang-anim-in');
-                contentRoot.classList.add('lang-anim-out');
+            if (current) {
+                current.style.opacity = 0;
                 setTimeout(() => {
-                    pageTitle.textContent = t.pageTitle;
-                    effectiveDate.textContent = t.effectiveDate;
-                    appName.textContent = t.appName;
-                    footerText.innerHTML = t.footer;
-                    sectionsRoot.innerHTML = t.sections;
-
-                    contentRoot.classList.remove('lang-anim-out');
-                    contentRoot.classList.add('lang-anim-in');
-                }, 250);
-            } else {
-                pageTitle.textContent = t.pageTitle;
-                effectiveDate.textContent = t.effectiveDate;
-                appName.textContent = t.appName;
-                footerText.innerHTML = t.footer;
-                sectionsRoot.innerHTML = t.sections;
+                    current.style.display = 'none';
+                    const newContent = document.getElementById(`content-${newLang}`);
+                    newContent.style.display = 'block';
+                    html.lang = newLang;
+                    if (newLang === 'fa') {
+                        document.title = 'سیاست حفظ حریم خصوصی - Leit';
+                    } else if (newLang === 'de') {
+                        document.title = 'Datenschutzrichtlinie - Leit';
+                    } else {
+                        document.title = 'Privacy Policy - Leit';
+                    }
+                    setTimeout(() => {
+                        newContent.style.opacity = 1;
+                    }, 50);
+                }, 500);
             }
-
-            try {
-                localStorage.setItem('leit_lang', langKey);
-            } catch (e) {}
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            let defaultLang = 'en';
-            try {
-                const saved = localStorage.getItem('leit_lang');
-                if (saved && translations[saved]) {
-                    defaultLang = saved;
-                }
-            } catch (e) {}
-
-            applyLanguage(defaultLang, true);
-
-            document.getElementById('langSwitcher').addEventListener('click', (e) => {
-                const btn = e.target.closest('.lang-btn');
-                if (!btn) return;
-                const lang = btn.dataset.lang;
-                if (!lang || !translations[lang]) return;
-                applyLanguage(lang);
-            });
         });
     </script>
-
 </body>
 </html>
