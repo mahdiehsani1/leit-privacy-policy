@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Leit</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Leit App Design System 
+           Enhanced with Animations
+        */
+        :root {
+            /* Light Mode Defaults */
+            --bg-color: #ffffff;
+            --card-bg: #fdfdfd;
+            --text-primary: #121212;
+            --text-secondary: #555555;
+            --accent: #000000;
+            --accent-hover: #333333;
+            --btn-text: #ffffff;
+            --divider: #eeeeee;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.02);
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.12);
+            --radius-card: 24px;
+            --radius-btn: 18px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Dark Mode Defaults */
+                --bg-color: #0F0F0F;
+                --card-bg: #1A1A1A;
+                --text-primary: #ffffff;
+                --text-secondary: #a0a0a0;
+                --accent: #ffffff;
+                --accent-hover: #e0e0e0;
+                --btn-text: #000000;
+                --divider: #2a2a2a;
+                --shadow-sm: 0 4px 6px rgba(0,0,0,0.2);
+                --shadow-md: 0 10px 30px rgba(0,0,0,0.4);
+                --shadow-hover: 0 20px 40px rgba(0,0,0,0.6);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 1000;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: var(--accent);
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Header Style */
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--divider);
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        .logo-container {
+            display: inline-block;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .app-name {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            background: linear-gradient(45deg, var(--text-primary), var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            background: var(--card-bg);
+            padding: 6px 16px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Card Section Style */
+        .section-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-card);
+            padding: 40px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--divider);
+            opacity: 0; /* Hidden initially for animation */
+            animation: fadeUp 0.8s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Staggered Animation Delays */
+        .section-card:nth-child(2) { animation-delay: 0.1s; }
+        .section-card:nth-child(3) { animation-delay: 0.2s; }
+        .section-card:nth-child(4) { animation-delay: 0.3s; }
+        .section-card:nth-child(5) { animation-delay: 0.4s; }
+        .section-card:nth-child(6) { animation-delay: 0.5s; }
+        .section-card:nth-child(7) { animation-delay: 0.6s; }
+        .section-card:nth-child(8) { animation-delay: 0.7s; }
+        .section-card:nth-child(9) { animation-delay: 0.8s; }
+        .section-card:nth-child(10) { animation-delay: 0.9s; }
+
+        /* Hover Effect for Cards */
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        /* Decorative line next to H2 */
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            bottom: 4px;
+            width: 4px;
+            background-color: var(--accent);
+            border-radius: 4px;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        p, li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Custom Bullet Points */
+        li::before {
+            content: '•';
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Button Style */
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent);
+            color: var(--btn-text);
+            padding: 16px 32px;
+            border-radius: var(--radius-btn);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 16px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .contact-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.5s forwards;
+        }
+
+        footer span {
+            opacity: 0.6;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container { padding: 40px 20px; }
+            .app-name { font-size: 32px; }
+            h1 { font-size: 24px; }
+            .section-card { padding: 24px; border-radius: 20px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="app-name">Leit</div>
+            </div>
+            <h1>Privacy Policy</h1>
+            <div class="date">Effective Date: December 1, 2025</div>
+        </header>
+
+        <div class="section-card">
+            <h2>1. Introduction</h2>
+            <p><strong>Mahdi Ehsani</strong> (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how our mobile application, <strong>Leit</strong> (the “App”), collects, uses, and safeguards your personal information. By installing or using the App, you acknowledge and agree to the practices described in this Privacy Policy.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>2. Information We Collect</h2>
+            
+            <h3>A. Personal Information</h3>
+            <p>When you sign in to the App, we may collect certain personal information through third-party authentication providers such as Google Sign-In. This may include:</p>
+            <ul>
+                <li>Email address</li>
+                <li>Name and profile picture (if available)</li>
+                <li>User ID generated by the authentication provider</li>
+            </ul>
+
+            <h3>B. User Content and Cloud Backups</h3>
+            <p>A core feature of the App is the ability to save and restore your learning progress.</p>
+            <p><strong>Cloud Backups:</strong> When you use the “Backup to Cloud” feature, the App uploads an encrypted file containing your vocabulary lists, examples, and Leitner box progress to your private storage space on Google Firebase Storage.</p>
+            <p>This data is used solely to restore your data across devices or after reinstallation. We do not access, analyze, or share your learning content for any purpose other than providing backup and restore functionality.</p>
+
+            <h3>C. Device and Usage Data</h3>
+            <p>To understand how the App is used and to improve its stability and performance, we may collect certain non-personal data, including:</p>
+            <ul>
+                <li>Device model and operating system version</li>
+                <li>Anonymized IP address</li>
+                <li>Crash reports (e.g., via Firebase Crashlytics)</li>
+                <li>Basic interaction metrics (such as screens visited and features used)</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the collected information for the following purposes:</p>
+            <ul>
+                <li><strong>Service Provision:</strong> To authenticate your identity, synchronize your progress, and securely store your cloud backups.</li>
+                <li><strong>App Improvement:</strong> To detect bugs, prevent crashes, and understand user preferences in order to improve the App and future updates.</li>
+                <li><strong>Communication:</strong> To send important system notifications, such as updates to this Privacy Policy, security alerts, or critical service-related messages.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2>4. Third-Party Services</h2>
+            <p>We utilize trusted third-party services to facilitate the App’s functionality. These providers adhere to their own privacy policies. The main services we use include:</p>
+            <ul>
+                <li><strong>Google Firebase</strong> (Authentication, Storage, Analytics, Crashlytics): Used for user authentication, secure data storage, and app analytics.</li>
+                <li><strong>Firebase Cloud Messaging (FCM):</strong> Used to deliver push notifications and reminders.</li>
+            </ul>
+            <p>You are encouraged to review the privacy policies of these third-party providers for more information on how they handle your data.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>5. App Permissions</h2>
+            <p>To function correctly, the App may require access to certain device features:</p>
+            <ul>
+                <li><strong>Internet:</strong> Required to sign in, synchronize data, and upload/download cloud backups.</li>
+                <li><strong>Storage:</strong> Required to create temporary backup files before uploading them to the cloud.</li>
+                <li><strong>Microphone (if applicable):</strong> May be requested if you use speech-to-text features or pronunciation practice tools.</li>
+            </ul>
+            <p>We only request permissions that are necessary for the core functionality of the App.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>6. Data Security</h2>
+            <p>We implement industry-standard security measures to protect your data. Your cloud backups are stored on secure Google Firebase servers, and access is restricted to your authenticated account.</p>
+            <p>However, please be aware that no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>7. Data Deletion and Your Rights</h2>
+            <p>You have the right to delete your account and all associated data at any time.</p>
+            
+            <h3>In-App Deletion</h3>
+            <p>You can delete your data by navigating to <strong>Settings > Clear All Data</strong> within the App. This action will remove your local data, your cloud backup file, and your account information associated with the App.</p>
+
+            <h3>Request via Email</h3>
+            <p>If you cannot access the App, you may request full account deletion by contacting us using the link below with the subject line “Account Deletion Request.” We will process such requests within a reasonable timeframe.</p>
+            
+            <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="contact-btn">Request Data Deletion</a>
+        </div>
+
+        <div class="section-card">
+            <h2>8. Children’s Privacy</h2>
+            <p>The App is intended for general audiences and is not specifically directed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+            <p>If we become aware that we have inadvertently collected personal information from a child under 13, we will take steps to delete such information as soon as reasonably possible. If you believe that a child under 13 has provided us with personal information, please contact us.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>9. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated “Effective Date.”</p>
+            <p>You are advised to review this Privacy Policy periodically for any changes. Your continued use of the App after any modifications to this Privacy Policy will constitute your acknowledgment of the modifications and your consent to abide by the updated policy.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>10. Contact Us</h2>
+            <p>If you have any questions, concerns, or suggestions about this Privacy Policy or our data practices, please contact us at:</p>
+            <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="contact-btn">mahdi.ehsani.afghan@gmail.com</a>
+        </div>
+
+        <footer>
+            <span>&copy; 2025 Leit. Developed by Mahdi Ehsani. All rights reserved.</span>
+        </footer>
+    </div>
+
+    <script>
+        // Scroll Progress Bar Script
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+
+</body>
+</html>
