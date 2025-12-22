@@ -237,7 +237,7 @@
         <header>
             <div class="app-name" id="txt-appname">Leit</div>
             <h1 id="txt-title">Privacy Policy</h1>
-            <div class="date-badge" id="txt-date">Effective Date: December 11, 2025</div>
+            <div class="date-badge" id="txt-date">Effective Date: December 22, 2025</div>
         </header>
         <main id="content-area" class="content-wrapper">
             </main>
@@ -251,77 +251,74 @@
                 dir: "ltr",
                 appname: "Leit",
                 title: "Privacy Policy",
-                date: "Effective Date: December 11, 2025",
+                date: "Effective Date: December 22, 2025",
                 footer: "&copy; 2025 Leit. Developed by Mahdi Ehsani. All rights reserved.",
                 body: `
                     <div class="section-card">
                         <h2>1. Introduction</h2>
-                        <p><strong>Mahdi Ehsani</strong> (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how our mobile application, <strong>Leit</strong> (the “App”), collects, uses, and safeguards your personal information. By installing or using the App, and specifically by using our Premium features such as Magic Fill, Cloud TTS, and Cloud Backup, you acknowledge and agree to the practices described herein.</p>
+                        <p><strong>Mahdi Ehsani</strong> (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how our mobile application, <strong>Leit</strong> (the “App”), collects, uses, and safeguards your personal information. By using the App, and specifically our AI-powered features like Magic Fill, Neural TTS, and Cloud Sync, you acknowledge the data practices described herein.</p>
                     </div>
                     <div class="section-card">
                         <h2>2. Information We Collect</h2>
-                       
+                        
                         <h3>A. Personal Information</h3>
-                        <p>When you sign in to the App, we collect personal information through third-party providers (e.g., Google Sign-In):</p>
+                        <p>When you sign in to enable Cloud features, we process the following via Google Firebase:</p>
                         <ul>
-                            <li>Email address and User ID</li>
-                            <li>Name and profile picture (if available)</li>
-                            <li>Subscription status (Premium membership details)</li>
+                            <li>Email address and User ID (for authentication)</li>
+                            <li>Profile information (Name and avatar)</li>
+                            <li>Subscription Tokens (to verify Premium status via RevenueCat)</li>
                         </ul>
 
-                        <h3>B. AI and Cloud Service Data</h3>
-                        <p>To provide advanced Premium features, certain data must be transmitted to our cloud partners:</p>
+                        <h3>B. AI and Cloud Usage Data</h3>
+                        <p>To deliver our core "Smart Features," specific data is processed in the cloud:</p>
                         <ul>
-                            <li><strong>Magic Fill:</strong> Words or phrases you input are sent to Google's Generative AI (Gemini) to generate translations, examples, and grammar details.</li>
-                            <li><strong>Google Cloud TTS:</strong> Text from your vocabulary cards is sent to Google Cloud Text-to-Speech API to generate audio pronunciations.</li>
-                            <li><strong>Cloud Backups:</strong> Encrypted copies of your database (vocab list, Leitner progress) are uploaded to your private storage on Google Firebase Storage.</li>
+                            <li><strong>Magic Fill Content:</strong> Words you submit are sent to Google's Generative AI (Gemini) to generate educational content (translations, grammar, examples).</li>
+                            <li><strong>Neural TTS:</strong> Text is transmitted to Google Cloud Text-to-Speech API to generate high-quality audio files.</li>
+                            <li><strong>Cloud Sync Data:</strong> Your vocabulary database and Leitner progress are securely synchronized and stored on Google Firestore to keep your devices in sync.</li>
+                            <li><strong>Smart Notifications:</strong> Your learning habits and review history are analyzed in the cloud to schedule intelligent reminders at optimal times.</li>
                         </ul>
 
-                        <h3>C. Device and Usage Data</h3>
-                        <p>We collect non-personal data to improve app stability:</p>
+                        <h3>C. Device and Diagnostics</h3>
+                        <p>We collect anonymized data to ensure app stability:</p>
                         <ul>
-                            <li>Device model, OS version, and IP address (anonymized)</li>
-                            <li>Crash reports and performance metrics (via Firebase Crashlytics)</li>
+                            <li>Device model, OS version, and locale</li>
+                            <li>Crash logs and performance metrics (via Firebase Crashlytics)</li>
                         </ul>
                     </div>
                     <div class="section-card">
                         <h2>3. How We Use Your Information</h2>
                         <ul>
-                            <li><strong>Service Provision:</strong> To authenticate you, process your vocabulary with AI, generate audio, and securely store backups.</li>
-                            <li><strong>Subscription Management:</strong> To verify your Premium status and grant access to paid features.</li>
-                            <li><strong>App Improvement:</strong> To analyze feature usage and fix bugs.</li>
+                            <li><strong>Service Delivery:</strong> To generate AI content, sync your progress across devices, and provide audio pronunciation.</li>
+                            <li><strong>Smart Scheduling:</strong> To calculate the best time for you to review words (based on SM-2 algorithm and cloud analysis).</li>
+                            <li><strong>Subscription Management:</strong> To validate your purchase and unlock Premium features.</li>
                         </ul>
                     </div>
                     <div class="section-card">
-                        <h2>4. Third-Party Services & Data Sharing</h2>
-                        <p>We do not sell your data. However, data is shared with trusted partners to enable App functionality:</p>
+                        <h2>4. Third-Party Services</h2>
+                        <p>We share necessary data with trusted infrastructure providers to operate the App:</p>
                         <ul>
-                            <li><strong>Google Firebase:</strong> Authentication, Database, Storage, and Analytics.</li>
-                            <li><strong>Google Generative AI (Gemini):</strong> Processes text for the "Magic Fill" feature. Data sent here is for processing only and adheres to Google's API data usage policies.</li>
-                            <li><strong>Google Cloud TTS:</strong> Processes text to generate audio.</li>
-                            <li><strong>Payment Processors:</strong> Purchases are handled directly by the Apple App Store or Google Play Store. We do not store your credit card information.</li>
+                            <li><strong>Google Firebase:</strong> Backend infrastructure for Auth, Database, Storage, and Analytics.</li>
+                            <li><strong>Google Gemini & Cloud TTS:</strong> AI processors for text and audio generation.</li>
+                            <li><strong>RevenueCat:</strong> Manages subscription infrastructure. We share an anonymous User ID to validate Premium status across platforms.</li>
+                            <li><strong>App Stores (Apple/Google):</strong> Handle all financial transactions directly. We never see or store your credit card details.</li>
                         </ul>
                     </div>
                     <div class="section-card">
                         <h2>5. Data Security</h2>
-                        <p>Your cloud backups and account data are stored on secure Google servers. Access to backups is restricted to your authenticated account. While we use industry-standard security, no method of electronic transmission is 100% secure.</p>
+                        <p>Your data is encrypted in transit and at rest on secure Google Cloud servers. Cloud Sync ensures your data is accessible only by your authenticated account. However, no internet transmission is 100% secure.</p>
                     </div>
                     <div class="section-card">
-                        <h2>6. Data Deletion</h2>
-                        <p>You have the right to delete your account and data at any time.</p>
-                        <h3>In-App Deletion</h3>
-                        <p>Go to <strong>Settings > Clear All Data</strong> to remove local data and cloud backups.</p>
-                        <h3>Request via Email</h3>
-                        <p>You may request full account deletion by contacting us below.</p>
+                        <h2>6. Data Control & Deletion</h2>
+                        <p>You retain full ownership of your data.</p>
+                        <h3>In-App Controls</h3>
+                        <p>Go to <strong>Settings > Account Zone</strong> to clear local data or permanently delete your cloud account and backups instantly.</p>
+                        <h3>Contact Request</h3>
+                        <p>You may also request data deletion via email:</p>
                         <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="action-btn">Request Data Deletion</a>
                     </div>
                     <div class="section-card">
-                        <h2>7. Changes to This Policy</h2>
-                        <p>We may update this policy. Continued use of the App after changes implies acceptance.</p>
-                    </div>
-                    <div class="section-card">
-                        <h2>8. Contact Us</h2>
-                        <p>For questions regarding privacy, contact:</p>
+                        <h2>7. Contact Us</h2>
+                        <p>For privacy inquiries, please contact:</p>
                         <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="action-btn">mahdi.ehsani.afghan@gmail.com</a>
                     </div>
                 `
@@ -329,64 +326,74 @@
             de: {
                 dir: "ltr",
                 appname: "Leit",
-                title: "Datenschutzrichtlinie",
-                date: "Gültig ab: 11. Dezember 2025",
+                title: "Datenschutzerklärung",
+                date: "Gültig ab: 22. Dezember 2025",
                 footer: "&copy; 2025 Leit. Entwickelt von Mahdi Ehsani. Alle Rechte vorbehalten.",
                 body: `
                     <div class="section-card">
                         <h2>1. Einführung</h2>
-                        <p><strong>Mahdi Ehsani</strong> („wir“, „uns“) verpflichtet sich zum Schutz Ihrer Privatsphäre. Diese Richtlinie erklärt, wie die <strong>Leit</strong> App Ihre Daten sammelt und nutzt, insbesondere in Bezug auf Premium-Funktionen wie Magic Fill, Cloud TTS und Cloud-Backups.</p>
+                        <p><strong>Mahdi Ehsani</strong> („wir“, „uns“) nimmt den Schutz Ihrer Daten ernst. Diese Erklärung erläutert, wie die <strong>Leit</strong> App Ihre Informationen verarbeitet, insbesondere bei der Nutzung unserer KI-gestützten Funktionen wie Magic Fill, Neural TTS und Cloud Sync.</p>
                     </div>
                     <div class="section-card">
-                        <h2>2. Informationen, die wir sammeln</h2>
-                       
-                        <h3>A. Persönliche Informationen</h3>
-                        <p>Bei der Anmeldung sammeln wir über Drittanbieter (z. B. Google Sign-In):</p>
+                        <h2>2. Gesammelte Informationen</h2>
+                        
+                        <h3>A. Persönliche Daten</h3>
+                        <p>Bei der Anmeldung für Cloud-Funktionen verarbeiten wir über Google Firebase:</p>
                         <ul>
-                            <li>E-Mail-Adresse und Benutzer-ID</li>
-                            <li>Name und Profilbild</li>
-                            <li>Abonnementstatus (Premium-Mitgliedschaft)</li>
+                            <li>E-Mail-Adresse und Benutzer-ID (zur Authentifizierung)</li>
+                            <li>Profilinformationen (Name und Avatar)</li>
+                            <li>Abonnement-Token (zur Überprüfung des Premium-Status via RevenueCat)</li>
                         </ul>
 
-                        <h3>B. KI- und Cloud-Dienst-Daten</h3>
-                        <p>Für erweiterte Funktionen werden Daten an unsere Cloud-Partner gesendet:</p>
+                        <h3>B. KI- und Cloud-Nutzungsdaten</h3>
+                        <p>Zur Bereitstellung unserer „Smart Features“ werden bestimmte Daten in der Cloud verarbeitet:</p>
                         <ul>
-                            <li><strong>Magic Fill:</strong> Ihre Eingaben werden an Googles Generative AI (Gemini) gesendet, um Übersetzungen und Beispiele zu erstellen.</li>
-                            <li><strong>Google Cloud TTS:</strong> Text wird an die Google Cloud Text-to-Speech API gesendet, um Audio zu generieren.</li>
-                            <li><strong>Cloud-Backups:</strong> Verschlüsselte Kopien Ihrer Datenbank werden in Ihrem privaten Google Firebase-Speicher abgelegt.</li>
+                            <li><strong>Magic Fill-Inhalte:</strong> Eingereichte Wörter werden an Googles Generative AI (Gemini) gesendet, um Lerninhalte (Übersetzungen, Grammatik) zu generieren.</li>
+                            <li><strong>Neural TTS:</strong> Text wird an die Google Cloud Text-to-Speech API gesendet, um hochwertige Audiodateien zu erstellen.</li>
+                            <li><strong>Cloud Sync-Daten:</strong> Ihre Vokabeldatenbank und Leitner-Fortschritte werden sicher synchronisiert und auf Google Firestore gespeichert.</li>
+                            <li><strong>Intelligente Benachrichtigungen:</strong> Ihre Lerngewohnheiten werden in der Cloud analysiert, um Erinnerungen zum optimalen Zeitpunkt zu planen.</li>
                         </ul>
 
-                        <h3>C. Geräte-Daten</h3>
-                        <p>Wir sammeln anonymisierte Daten (Gerätemodell, Absturzberichte) zur Verbesserung der App-Stabilität.</p>
+                        <h3>C. Geräte-Diagnose</h3>
+                        <p>Wir sammeln anonymisierte Daten zur App-Stabilität:</p>
+                        <ul>
+                            <li>Gerätemodell, OS-Version und Sprache</li>
+                            <li>Absturzprotokolle und Leistungsdaten (via Firebase Crashlytics)</li>
+                        </ul>
                     </div>
                     <div class="section-card">
                         <h2>3. Nutzung Ihrer Informationen</h2>
-                        <p>Wir nutzen Daten zur Bereitstellung der Dienste (Authentifizierung, KI-Verarbeitung, Backups), zur Verwaltung Ihres Abonnements und zur Fehlerbehebung.</p>
+                        <ul>
+                            <li><strong>Dienstbereitstellung:</strong> Generierung von KI-Inhalten, Synchronisierung des Fortschritts und Audio-Bereitstellung.</li>
+                            <li><strong>Intelligente Planung:</strong> Berechnung der besten Lernzeiten (basierend auf SM-2 Algorithmus und Cloud-Analyse).</li>
+                            <li><strong>Abo-Verwaltung:</strong> Validierung Ihres Kaufs und Freischaltung von Premium-Funktionen.</li>
+                        </ul>
                     </div>
                     <div class="section-card">
-                        <h2>4. Drittanbieter-Dienste</h2>
-                        <p>Wir verkaufen Ihre Daten nicht. Daten werden mit vertrauenswürdigen Partnern geteilt:</p>
+                        <h2>4. Dienste von Drittanbietern</h2>
+                        <p>Wir teilen notwendige Daten mit vertrauenswürdigen Infrastruktur-Partnern:</p>
                         <ul>
-                            <li><strong>Google Firebase:</strong> Authentifizierung, Datenbank und Speicher.</li>
-                            <li><strong>Google Generative AI & Cloud TTS:</strong> Zur Verarbeitung von Text und Audio.</li>
-                            <li><strong>Zahlungsabwickler:</strong> Käufe werden direkt über den Apple App Store oder Google Play Store abgewickelt. Wir speichern keine Finanzdaten.</li>
+                            <li><strong>Google Firebase:</strong> Backend-Infrastruktur für Auth, Datenbank und Speicher.</li>
+                            <li><strong>Google Gemini & Cloud TTS:</strong> KI-Prozessoren für Text und Audio.</li>
+                            <li><strong>RevenueCat:</strong> Verwaltet die Abo-Infrastruktur. Wir teilen eine anonyme User-ID zur Validierung des Premium-Status.</li>
+                            <li><strong>App Stores (Apple/Google):</strong> Wickeln alle Finanztransaktionen ab. Wir speichern keine Kreditkartendaten.</li>
                         </ul>
                     </div>
                     <div class="section-card">
                         <h2>5. Datensicherheit</h2>
-                        <p>Wir nutzen Industriestandards (Google-Server) zum Schutz Ihrer Daten. Eine 100%ige Sicherheit kann bei elektronischer Übertragung jedoch nie garantiert werden.</p>
+                        <p>Ihre Daten werden verschlüsselt auf sicheren Google Cloud-Servern übertragen und gespeichert. Cloud Sync stellt sicher, dass nur Ihr authentifiziertes Konto Zugriff hat.</p>
                     </div>
                     <div class="section-card">
-                        <h2>6. Datenlöschung</h2>
-                        <p>Sie können Ihre Daten jederzeit löschen.</p>
-                        <h3>In der App</h3>
-                        <p>Navigieren Sie zu <strong>Einstellungen > Alle Daten löschen</strong>.</p>
-                        <h3>Per E-Mail</h3>
-                        <p>Kontaktieren Sie uns für eine vollständige Kontolöschung.</p>
+                        <h2>6. Datenkontrolle & Löschung</h2>
+                        <p>Sie behalten die volle Kontrolle über Ihre Daten.</p>
+                        <h3>In-App-Kontrolle</h3>
+                        <p>Gehen Sie zu <strong>Einstellungen > Kontobereich</strong>, um lokale Daten zu löschen oder Ihr Cloud-Konto und Backups sofort dauerhaft zu entfernen.</p>
+                        <h3>Löschantrag</h3>
                         <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="action-btn">Datenlöschung anfordern</a>
                     </div>
                     <div class="section-card">
                         <h2>7. Kontakt</h2>
+                        <p>Bei Fragen zum Datenschutz wenden Sie sich bitte an:</p>
                         <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="action-btn">mahdi.ehsani.afghan@gmail.com</a>
                     </div>
                 `
@@ -395,62 +402,74 @@
                 dir: "rtl",
                 appname: "لایت",
                 title: "سیاست حفظ حریم خصوصی",
-                date: "تاریخ اجرا: ۱۱ دسامبر ۲۰۲۵",
+                date: "تاریخ اجرا: ۲۲ دسامبر ۲۰۲۵",
                 footer: "&copy; ۲۰۲۵ لایت. توسعه‌یافته توسط مهدی احسانی. تمام حقوق محفوظ است.",
                 body: `
                     <div class="section-card">
                         <h2>۱. مقدمه</h2>
-                        <p><strong>مهدی احسانی</strong> («ما») متعهد به حفاظت از حریم خصوصی شماست. این سیاست توضیح می‌دهد که اپلیکیشن <strong>لایت</strong> چگونه اطلاعات شما را جمع‌آوری و استفاده می‌کند، به‌ویژه در هنگام استفاده از قابلیت‌های اشتراکی مانند Magic Fill، تبدیل متن به گفتار و پشتیبان‌گیری ابری.</p>
+                        <p><strong>مهدی احسانی</strong> («ما») متعهد به حفاظت از حریم خصوصی شماست. این سیاست توضیح می‌دهد که اپلیکیشن <strong>لایت</strong> چگونه اطلاعات شما را پردازش می‌کند، به‌ویژه هنگام استفاده از قابلیت‌های هوشمند مانند Magic Fill، تبدیل متن به گفتار عصبی و همگام‌سازی ابری (Cloud Sync).</p>
                     </div>
                     <div class="section-card">
                         <h2>۲. اطلاعاتی که جمع‌آوری می‌کنیم</h2>
-                       
+                        
                         <h3>الف. اطلاعات شخصی</h3>
-                        <p>هنگام ورود، ما از طریق ارائه‌دهندگان ثالث (مانند گوگل) موارد زیر را دریافت می‌کنیم:</p>
+                        <p>هنگام ورود برای فعال‌سازی قابلیت‌های ابری، موارد زیر از طریق گوگل فایربیس پردازش می‌شوند:</p>
                         <ul>
-                            <li>آدرس ایمیل و شناسه کاربری</li>
-                            <li>نام و تصویر پروفایل</li>
-                            <li>وضعیت اشتراک (جزئیات عضویت پریمیوم)</li>
+                            <li>آدرس ایمیل و شناسه کاربری (برای احراز هویت)</li>
+                            <li>اطلاعات پروفایل (نام و آواتار)</li>
+                            <li>توکن‌های اشتراک (برای تایید وضعیت پریمیوم از طریق RevenueCat)</li>
                         </ul>
 
                         <h3>ب. داده‌های هوش مصنوعی و سرویس‌های ابری</h3>
-                        <p>برای ارائه خدمات پیشرفته، برخی داده‌ها پردازش می‌شوند:</p>
+                        <p>برای ارائه «قابلیت‌های هوشمند» اصلی، داده‌های خاصی در فضای ابری پردازش می‌شوند:</p>
                         <ul>
-                            <li><strong>Magic Fill:</strong> کلمات وارد شده برای تولید ترجمه و مثال به هوش مصنوعی مولد گوگل (Gemini) ارسال می‌شوند.</li>
-                            <li><strong>Google Cloud TTS:</strong> متن کارت‌ها برای تولید تلفظ صوتی به سرویس تبدیل متن به گفتار گوگل ارسال می‌شود.</li>
-                            <li><strong>پشتیبان‌گیری ابری:</strong> نسخه‌های رمزنگاری شده دیتابیس شما در فضای خصوصی شما در Google Firebase Storage ذخیره می‌شوند.</li>
+                            <li><strong>محتوای Magic Fill:</strong> کلمات ارسالی شما برای تولید محتوای آموزشی (ترجمه، گرامر، مثال) به هوش مصنوعی مولد گوگل (Gemini) فرستاده می‌شوند.</li>
+                            <li><strong>TTS عصبی:</strong> متن‌ها برای تولید فایل‌های صوتی با کیفیت بالا به API تبدیل متن به گفتار گوگل ارسال می‌شوند.</li>
+                            <li><strong>داده‌های همگام‌سازی (Sync):</strong> دیتابیس لغات و پیشرفت لایتنر شما به‌صورت امن همگام‌سازی شده و در Google Firestore ذخیره می‌شوند.</li>
+                            <li><strong>نوتیفیکیشن‌های هوشمند:</strong> عادات یادگیری و تاریخچه مرور شما در فضای ابری تحلیل می‌شوند تا یادآورها در بهترین زمان ممکن ارسال شوند.</li>
                         </ul>
 
-                        <h3>ج. داده‌های دستگاه</h3>
-                        <p>ما داده‌های ناشناس (مدل دستگاه، گزارش خرابی) را برای بهبود پایداری برنامه جمع‌آوری می‌کنیم.</p>
+                        <h3>ج. داده‌های دستگاه و عیب‌یابی</h3>
+                        <p>ما داده‌های ناشناس را برای تضمین پایداری برنامه جمع‌آوری می‌کنیم:</p>
+                        <ul>
+                            <li>مدل دستگاه، نسخه سیستم‌عامل و زبان</li>
+                            <li>گزارش‌های خرابی (Crash logs) و معیارهای عملکرد (از طریق Firebase Crashlytics)</li>
+                        </ul>
                     </div>
                     <div class="section-card">
                         <h2>۳. نحوه استفاده از اطلاعات</h2>
-                        <p>ما از اطلاعات برای احراز هویت، پردازش هوشمند محتوا، ذخیره امن بکاپ‌ها و مدیریت وضعیت اشتراک پریمیوم شما استفاده می‌کنیم.</p>
+                        <ul>
+                            <li><strong>ارائه خدمات:</strong> تولید محتوای هوشمند، همگام‌سازی پیشرفت بین دستگاه‌ها و ارائه تلفظ صوتی.</li>
+                            <li><strong>زمان‌بندی هوشمند:</strong> محاسبه بهترین زمان مرور لغات (بر اساس الگوریتم SM-2 و تحلیل ابری).</li>
+                            <li><strong>مدیریت اشتراک:</strong> تایید خرید و فعال‌سازی قابلیت‌های پریمیوم.</li>
+                        </ul>
                     </div>
                     <div class="section-card">
                         <h2>۴. سرویس‌های شخص ثالث</h2>
-                        <p>ما داده‌های شما را نمی‌فروشیم. داده‌ها تنها برای عملکرد برنامه با شرکای مورد اعتماد به اشتراک گذاشته می‌شوند:</p>
+                        <p>ما داده‌های ضروری را با شرکای زیرساختی مورد اعتماد به اشتراک می‌گذاریم:</p>
                         <ul>
-                            <li><strong>Google Firebase:</strong> زیرساخت ذخیره‌سازی و دیتابیس.</li>
-                            <li><strong>هوش مصنوعی گوگل:</strong> جهت پردازش متن و صدا.</li>
-                            <li><strong>پرداخت‌ها:</strong> تمام تراکنش‌ها مستقیماً توسط اپ استور اپل یا گوگل پلی انجام می‌شود و ما اطلاعات بانکی شما را ذخیره نمی‌کنیم.</li>
+                            <li><strong>Google Firebase:</strong> زیرساخت اصلی برای احراز هویت، دیتابیس، ذخیره‌سازی و آنالیتیکس.</li>
+                            <li><strong>Google Gemini & Cloud TTS:</strong> پردازنده‌های هوش مصنوعی برای تولید متن و صدا.</li>
+                            <li><strong>RevenueCat:</strong> مدیریت زیرساخت اشتراک‌ها. ما یک شناسه کاربری ناشناس را برای تایید وضعیت پریمیوم بین پلتفرم‌ها به اشتراک می‌گذاریم.</li>
+                            <li><strong>فروشگاه‌های اپلیکیشن (اپل/گوگل):</strong> تمام تراکنش‌های مالی را مستقیماً انجام می‌دهند. ما هرگز اطلاعات کارت بانکی شما را نمی‌بینیم یا ذخیره نمی‌کنیم.</li>
                         </ul>
                     </div>
                     <div class="section-card">
                         <h2>۵. امنیت داده‌ها</h2>
-                        <p>داده‌های شما روی سرورهای امن گوگل ذخیره می‌شوند. با این حال، امنیت مطلق در فضای اینترنت هرگز تضمین نمی‌شود.</p>
+                        <p>داده‌های شما در هنگام انتقال و ذخیره‌سازی روی سرورهای امن گوگل رمزنگاری می‌شوند. سیستم Cloud Sync تضمین می‌کند که داده‌ها فقط توسط حساب کاربری شما قابل دسترسی هستند.</p>
                     </div>
                     <div class="section-card">
-                        <h2>۶. حذف داده‌ها</h2>
-                        <p>شما حق دارید حساب خود را در هر زمان حذف کنید.</p>
-                        <h3>حذف درون‌برنامه‌ای</h3>
-                        <p>به مسیر <strong>تنظیمات > پاک کردن تمام داده‌ها</strong> بروید.</p>
-                        <h3>درخواست ایمیلی</h3>
+                        <h2>۶. کنترل و حذف داده‌ها</h2>
+                        <p>شما مالکیت کامل داده‌های خود را دارید.</p>
+                        <h3>کنترل درون‌برنامه‌ای</h3>
+                        <p>به مسیر <strong>تنظیمات > ناحیه کاربری</strong> بروید تا داده‌های محلی را پاک کنید یا حساب ابری و بکاپ‌های خود را به‌صورت آنی و دائمی حذف نمایید.</p>
+                        <h3>درخواست تماس</h3>
+                        <p>همچنین می‌توانید درخواست حذف داده‌ها را از طریق ایمیل ارسال کنید:</p>
                         <a href="mailto:mahdi.ehsani.afghan@gmail.com?subject=Account Deletion Request" class="action-btn">درخواست حذف داده</a>
                     </div>
                     <div class="section-card">
                         <h2>۷. تماس با ما</h2>
+                        <p>برای پرسش‌های مربوط به حریم خصوصی با ما تماس بگیرید:</p>
                         <a href="mailto:mahdi.ehsani.afghan@gmail.com" class="action-btn">mahdi.ehsani.afghan@gmail.com</a>
                     </div>
                 `
@@ -460,8 +479,10 @@
         function setLanguage(lang) {
             const data = contentData[lang];
             const contentArea = document.getElementById('content-area');
-            contentArea.classList.add('fade-out');
-            contentArea.classList.remove('fade-in');
+            const contentWrapper = document.querySelector('.content-wrapper');
+            
+            contentWrapper.classList.add('fade-out');
+            contentWrapper.classList.remove('fade-in');
             
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             
@@ -477,8 +498,9 @@
                 document.getElementById('txt-date').textContent = data.date;
                 document.getElementById('txt-footer').innerHTML = data.footer;
                 contentArea.innerHTML = data.body;
-                contentArea.classList.remove('fade-out');
-                contentArea.classList.add('fade-in');
+                
+                contentWrapper.classList.remove('fade-out');
+                contentWrapper.classList.add('fade-in');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }, 300);
         }
